@@ -250,14 +250,15 @@ export default function Orders() {
   return (
     <RootBox>
       <SearchBar placeholder="Suche..." onClear={onClear} onSearch={onSearch}>
-        <Box display="flex" flex={1} justifyContent={'flex-end'}>
+        <Box display="flex" flex={1} justifyContent="flex-end">
           <Link to="/edit/-1">
-            <Button startIcon={<ModeEditOutlineOutlinedIcon />} size="large" variant="contained" disableElevation>
+            <Button startIcon={<ModeEditOutlineOutlinedIcon />} size="medium" variant="contained">
               Neuer Auftrag
             </Button>
           </Link>
         </Box>
       </SearchBar>
+
       <AppDataGrid
         loading={loading}
         getRowClassName={(params) => {
